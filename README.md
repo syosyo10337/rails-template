@@ -12,7 +12,12 @@ DBにはpostgreSQLを使用しています。
 
 
 # コマンドととして実行するもの
-1. railsプロジェクトの雛形作成
+1. 
+```
+docker compose build
+```
+ 
+2. railsプロジェクトの雛形作成
 (１個目のrailsはサービス名, 2個目はrailsコマンド)
 
 ```bash
