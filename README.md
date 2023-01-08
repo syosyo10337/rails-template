@@ -13,15 +13,11 @@ DBにはpostgreSQLを使用しています。
 
 # コマンドととして実行するもの
 1. railsプロジェクトの雛形作成
-```
-$ docker-compose run --rm rails new . --force --database=postgresql
-```
+(１個目のrailsはサービス名, 2個目はrailsコマンド)
 
-2. 作成されたので必要になるgemをインストールするように
+```bash
+$ docker-compose run --rm rails sh -c\ 
+"rails new . --force --database=postgresql && bundle install"
 ```
-$ docker-compose build
-```
-?これってrunのコマンドで&& で繋げれば良くないか?
-
-3. db.yamlを編集して、rails:db:createをする必要がありそう。
+2. config/database.ymlを編集して、rails:db:createをする必要がありそう。
 

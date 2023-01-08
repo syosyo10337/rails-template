@@ -55,7 +55,7 @@ COPY Gemfile.lock /${APP_NAME}
 RUN gem install bundler -v $BUNDLED_WITH
 RUN bundle install
 
-COPY docker/entrypoint.sh /usr/bin/
+COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh
 ENTRYPOINT [ "entrypoint.sh" ]
 EXPOSE 3000

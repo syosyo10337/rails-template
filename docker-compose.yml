@@ -13,7 +13,7 @@ services:
   rails:
     build:
       context: .
-      dockerfile: ./docker/Dockerfile
+      dockerfile: Dockerfile
     # app  
     volumes:
       - .:/<app>
