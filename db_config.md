@@ -13,7 +13,7 @@ development:
   <<: *default
   database: app_development
 
-  test:
+test:
   <<: *default
   database: app_test
 ```
@@ -21,3 +21,4 @@ development:
 ## コンテナの中でdb:createする
 ```bash
 $ rails db:create
+```

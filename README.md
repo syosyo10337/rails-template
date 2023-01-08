@@ -16,12 +16,11 @@ DBにはpostgreSQLを使用しています。
 (１個目のrailsはサービス名, 2個目はrailsコマンド)
 
 ```bash
-$ docker-compose run rails rails new . --force --database=postgresql
+$ docker-compose run  --rm rails sh -c "rails new . --force --database=postgresql && bundle install"
 ```
 
+2. config/database.ymlをdb_config.mdの内容に書き換えて、コンテナの中に潜り
 ```bash
-$ docker-compose build
+$ rails:db:create
 ```
-
-2. config/database.ymlを編集して、rails:db:createをする必要がありそう。
 
